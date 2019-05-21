@@ -33,7 +33,6 @@ class Sales extends Component {
                     isLoad: true
                 });
             });
-        
     }
 
     loadSales() {
