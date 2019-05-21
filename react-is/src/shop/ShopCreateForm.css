@@ -1,0 +1,28 @@
+
+.text-avatar-create span {
+    line-height: 120px;
+    color: #fff;
+    font-size: 2em;
+}
+
+.text-avatar-create {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+    background: limegreen;
+}
+
+.shop-avatar-create img {
+    max-width: 120px;
+    max-height: 120px;
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.shop-avatar-create {
+    vertical-align: middle;
+    text-align: center;
+}

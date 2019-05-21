@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <springProfile name="dev">
+        <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>
+                    %d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n
+                </pattern>
+            </encoder>
+        </appender>
+        <root level="info">
+            <appender-ref ref="STDOUT"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="stage">
+        <appender name="SAVE-TO-FILE" class="ch.qos.logback.core.FileAppender">
+            <file>logs/stage.log</file>
+            <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                <Pattern>
+                    %-5level %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %logger{36}.%M - %msg%n
+                </Pattern>
+            </encoder>
+        </appender>
+        <root level="info">
+            <appender-ref ref="SAVE-TO-FILE"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="production">
+        <appender name="SAVE-TO-FILES" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>logs/prod.log</file>
+            <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                <Pattern>
+                    %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n
+                </Pattern>
+            </encoder>
+            <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+                <fileNamePattern>logs/prod_%i.log</fileNamePattern>
+            </rollingPolicy>
+            <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+                <maxFileSize>100KB</maxFileSize>
+            </triggeringPolicy>
+        </appender>
+        <root level="info">
+            <appender-ref ref="SAVE-TO-FILES"/>
+        </root>
+    </springProfile>
+
+</configuration>

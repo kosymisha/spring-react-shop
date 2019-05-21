@@ -1,0 +1,25 @@
+
+.text-avatar span {
+    line-height: 64px;
+    color: #fff;
+    font-size: 1em;
+}
+
+.text-avatar {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 50%;
+    background: limegreen;
+}
+
+.contact-body {
+    vertical-align: middle;
+}
+
+.profile-info .profile-avatar img {
+    border-radius: 50%;
+    max-width: 250px;
+}

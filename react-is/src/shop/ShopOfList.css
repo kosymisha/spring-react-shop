@@ -1,0 +1,27 @@
+
+.text-avatar span {
+    line-height: 64px;
+    color: #fff;
+    font-size: 1em;
+}
+
+.text-avatar {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+    background: limegreen;
+}
+
+.shop-avatar img {
+    max-width: 64px;
+}
+
+.msg-comment {
+    word-wrap: break-word;
+}
+
+.date-comment {
+    color: gray;
+}

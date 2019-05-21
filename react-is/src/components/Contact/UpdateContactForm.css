@@ -1,0 +1,23 @@
+.text-avatar-update span {
+    line-height: 100px;
+    color: #fff;
+    font-size: 2em;
+}
+
+.text-avatar-update img {
+    line-height: 100px;
+    color: #fff;
+    font-size: 2em;
+    border-radius: 50%;
+    max-width: 100px;
+}
+
+.text-avatar-update {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 50%;
+    background: limegreen;
+}
